@@ -28,6 +28,8 @@ const peerServer = ExpressPeerServer(server, {
     path: '/peerjs'
 });
 
+io.connect({ transports: ['websocket'] })
+
 app.use('/peerjs', peerServer);
 app.use(express.static(path.join(__dirname, 'public')));
 const PendingUser = require('./models/PendingUser');
