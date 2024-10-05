@@ -4,13 +4,22 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Video Chat Room</title>
+    
     <script>
         const ROOM_ID = "<%= roomId %>";
     </script>
+    
+    <!-- Load PeerJS first -->
     <script defer src="https://unpkg.com/peerjs@1.5.4/dist/peerjs.min.js"></script>
-    <script src="/socket.io/socket.io.js" defer></script>
-    <script src="/script.js" defer></script> <!-- Ensure this path is correct -->
-     <script>
+    
+    <!-- Load Socket.IO -->
+    <script src="/socket.io/socket.io.js"></script>
+    
+    <!-- Load your custom script -->
+    <script src="/script.js" defer></script>
+    
+    <script>
+        // Initialize Socket.IO
         const socket = io('https://r3dxx-9ce6f110c87b.herokuapp.com', {
             transports: ['websocket'], // Forcing WebSocket transport
         });
@@ -23,6 +32,7 @@
             console.log('Disconnected from the server');
         });
     </script>
+
     <style>
         #video-grid {
             display: grid;
