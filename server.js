@@ -21,7 +21,7 @@ const http = require("http");
 const socketIo = require("socket.io"); // Import socket.io here
 
 // Create server and initialize Socket.IO
-const server = http.createServer(app);
+const server = http.Server(app);
 const io = socketIo(server);
 const peerServer = ExpressPeerServer(server, {
     path: '/peerjs'
