@@ -27,10 +27,11 @@ const io = socketIo(server);
 const peerServer = ExpressPeerServer(server, {
     path: '/peerjs'
 });
-
+io.listen(4000);
 
 
 app.use('/peerjs', peerServer);
+
 app.use(express.static(path.join(__dirname, 'public')));
 const PendingUser = require('./models/PendingUser');
 const cookieParser = require('cookie-parser');
