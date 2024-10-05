@@ -19,6 +19,7 @@ const crypto = require('crypto');
 const { v4: uuidV4 } = require("uuid");
 const http = require("http");
 const socketIo = require("socket.io"); // Import socket.io here
+const { ExpressPeerServer } = require('peer');
 
 // Create server and initialize Socket.IO
 const server = http.Server(app);
