@@ -2,8 +2,8 @@ const socket = io('/');
 const videogrid = document.getElementById('video-grid');
 const peers = {};
 const newPeer = new Peer(undefined, {
-    host: '0.peerjs.com', // Your Heroku app name
-    port: '443',
+    host: '', // Your Heroku app name
+    port: '',
     path: '/peerjs',
     secure: true
 });
