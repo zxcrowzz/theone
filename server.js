@@ -28,7 +28,7 @@ const peerServer = ExpressPeerServer(server, {
     path: '/peerjs'
 });
 
-io.connect(r3dxx-9ce6f110c87b.herokuapp.com,{ transports: ['websocket'] })
+
 
 app.use('/peerjs', peerServer);
 app.use(express.static(path.join(__dirname, 'public')));
