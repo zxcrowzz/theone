@@ -10,7 +10,19 @@
     <script defer src="https://unpkg.com/peerjs@1.5.4/dist/peerjs.min.js"></script>
     <script src="/socket.io/socket.io.js" defer></script>
     <script src="/script.js" defer></script> <!-- Ensure this path is correct -->
-    
+     <script>
+        const socket = io('https://r3dxx-9ce6f110c87b.herokuapp.com', {
+            transports: ['websocket'], // Forcing WebSocket transport
+        });
+
+        socket.on('connect', () => {
+            console.log('Connected to the server');
+        });
+
+        socket.on('disconnect', () => {
+            console.log('Disconnected from the server');
+        });
+    </script>
     <style>
         #video-grid {
             display: grid;
